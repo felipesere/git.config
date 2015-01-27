@@ -18,7 +18,7 @@
   browser = open
 [push]
   config = default
-  default = tracking
+  default = current
 [rebase]
   autosquash = true
 [merge]
@@ -64,6 +64,7 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	ll = log --pretty=format:'%C(yellow)%h%Cred%d %Creset %s%Cblue [%Cgreen%cn%Creset%Cblue]' --decorate --numstat
 	cm = commit -m
+	cp = cherry-pick
 [credential]
 	helper = osxkeychain
 [git-up "fetch"]
@@ -72,7 +73,7 @@
 	templatedir = /Users/felipe/.git_template
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
